@@ -1,0 +1,321 @@
+/* Basic CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+dt,
+dd {
+  cursor: default;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+@layer base {
+  :root {
+    --background: 255 255% 100%;
+    --foreground: 252 63% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 252 63% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 252 63% 23%;
+    --primary: 252 63% 23%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 252 63% 93%;
+    --secondary-foreground: 252 63% 23%;
+    --muted: 252 63% 93%;
+    --muted-foreground: 252 63% 45%;
+    --accent: 252 63% 93%;
+    --accent-foreground: 252 63% 23%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 252 63% 90%;
+    --input: 252 63% 90%;
+    --ring: 252 63% 23%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 252 63% 23%;
+    --foreground: 0 0% 100%;
+    --card: 252 63% 23%;
+    --card-foreground: 0 0% 100%;
+    --popover: 252 63% 23%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 252 63% 23%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 252 63% 33%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 252 63% 33%;
+    --muted-foreground: 252 63% 75%;
+    --accent: 252 63% 33%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 252 63% 33%;
+    --input: 252 63% 33%;
+    --ring: 252 63% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles */
+:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Selection Color */
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: wait;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600;
+}
+
+/* Custom Container */
+.container-custom {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+/* Section Spacing */
+.section-spacing {
+  @apply py-16 sm:py-24 lg:py-32;
+}
+
+/* Card Hover Effect */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Button Base */
+.btn-base {
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+/* Primary Button */
+.btn-primary {
+  @apply btn-base bg-indigo-600 text-white hover:bg-indigo-500 focus:ring-indigo-500;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  @apply btn-base bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50;
+}
+
+/* Ghost Button */
+.btn-ghost {
+  @apply btn-base text-gray-900 hover:bg-gray-100;
+}
+
+/* Input Base */
+.input-base {
+  @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+}
+
+/* Form Label */
+.form-label {
+  @apply block text-sm font-medium leading-6 text-gray-900;
+}
+
+/* Badge */
+.badge {
+  @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ring-1 ring-inset;
+}
+
+/* Badge Variants */
+.badge-primary {
+  @apply badge bg-indigo-50 text-indigo-700 ring-indigo-700/10;
+}
+
+.badge-secondary {
+  @apply badge bg-gray-50 text-gray-600 ring-gray-500/10;
+}
+
+/* Responsive Image */
+.img-responsive {
+  @apply w-full h-auto object-cover;
+}
+
+/* Aspect Ratios */
+.aspect-video {
+  @apply relative pb-[56.25%];
+}
+
+.aspect-square {
+  @apply relative pb-[100%];
+}
+
+/* Grid Layout */
+.grid-auto-fit {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+/* Flex Layout */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+/* Typography */
+.heading-1 {
+  @apply text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl;
+}
+
+.heading-2 {
+  @apply text-3xl font-bold tracking-tight sm:text-4xl;
+}
+
+.heading-3 {
+  @apply text-2xl font-bold tracking-tight sm:text-3xl;
+}
+
+.body-large {
+  @apply text-lg leading-8;
+}
+
+.body-base {
+  @apply text-base leading-7;
+}
+
+.body-small {
+  @apply text-sm leading-6;
+}
+
+/* Transitions */
+.transition-base {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Shadows */
+.shadow-card {
+  @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+/* Z-index Utilities */
+.z-header {
+  @apply z-50;
+}
+
+.z-modal {
+  @apply z-40;
+}
+
+.z-dropdown {
+  @apply z-30;
+}
+
+.z-sticky {
+  @apply z-20;
+}
+
+/* Backdrop Blur */
+.backdrop-blur {
+  @apply backdrop-blur-md bg-white/80;
+}

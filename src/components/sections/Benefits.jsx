@@ -101,7 +101,6 @@ export default function Benefits() {
                 className="relative pl-9 p-4 rounded-lg transition-colors"
                 whileHover={{
                   scale: 1.02,
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
                   transition: { duration: 0.2 },
                 }}
               >

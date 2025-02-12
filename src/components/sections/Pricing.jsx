@@ -62,7 +62,10 @@ function classNames(...classes) {
 
 export default function Pricing() {
   return (
-    <div id="pricing" className="bg-primary-400 py-24 sm:py-32">
+    <div
+      id="pricing"
+      className="bg-gradient-to-b from-primary-300 to-primary-400 py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
@@ -71,7 +74,7 @@ export default function Pricing() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-semibold leading-7 text-white">
+            <h2 className="text-3xl font-semibold leading-7 text-primary-100">
               Pricing
             </h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -102,8 +105,8 @@ export default function Pricing() {
               key={tier.id}
               className={classNames(
                 tier.featured
-                  ? "bg-white/10 ring-2 ring-white"
-                  : "bg-white/5 ring-1 ring-white/50",
+                  ? "bg-white/20 ring-2 ring-primary-200"
+                  : "bg-white/10 ring-1 ring-white/20",
                 tierIdx === 0 ? "lg:rounded-l-2xl" : "",
                 tierIdx === tiers.length - 1 ? "lg:rounded-r-2xl" : "",
                 "rounded-2xl p-8 xl:p-10 backdrop-blur-sm relative hover:z-10"
@@ -119,26 +122,26 @@ export default function Pricing() {
                 <h3
                   id={tier.id}
                   className={classNames(
-                    tier.featured ? "text-primary" : "text-white",
+                    tier.featured ? "text-white" : "text-primary-100",
                     "text-lg font-semibold leading-8"
                   )}
                 >
                   {tier.name}
                 </h3>
                 {tier.featured && (
-                  <p className="rounded-full bg-primary px-2.5 py-1 text-xs font-semibold leading-5 text-white">
+                  <p className="rounded-full bg-primary-200 px-2.5 py-1 text-xs font-semibold leading-5 text-primary-900">
                     Most popular
                   </p>
                 )}
               </div>
-              <p className="mt-4 text-sm leading-6 text-primary-100">
+              <p className="mt-4 text-sm leading-6 text-primary-200">
                 {tier.description}
               </p>
               <p className="mt-6 flex items-baseline gap-x-1">
                 <span className="text-4xl font-bold tracking-tight text-white">
                   {tier.priceMonthly}
                 </span>
-                <span className="text-sm font-semibold leading-6 text-primary-100">
+                <span className="text-sm font-semibold leading-6 text-primary-200">
                   /month
                 </span>
               </p>
@@ -147,21 +150,21 @@ export default function Pricing() {
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.featured
-                    ? "bg-white text-primary-900 shadow-sm hover:bg-primary-100 focus-visible:outline-white"
-                    : "bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white",
-                  "mt-6 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    ? "bg-primary-100 text-primary-900 hover:bg-primary-200"
+                    : "bg-white/10 text-white hover:bg-white/20",
+                  "mt-6 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors"
                 )}
               >
                 Get started
               </a>
               <ul
                 role="list"
-                className="mt-8 space-y-3 text-sm leading-6 text-primary-100 xl:mt-10"
+                className="mt-8 space-y-3 text-sm leading-6 text-primary-200"
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
                     <CheckIcon
-                      className="h-6 w-5 flex-none text-primary"
+                      className="h-6 w-5 flex-none text-primary-100"
                       aria-hidden="true"
                     />
                     {feature}
@@ -184,7 +187,10 @@ export default function Pricing() {
             shipping.
             <br />
             Need a custom plan?{" "}
-            <a href="#contact" className="text-white hover:text-primary-200">
+            <a
+              href="#contact"
+              className="text-white hover:text-primary-200 underline"
+            >
               Contact us
             </a>{" "}
             for enterprise solutions.

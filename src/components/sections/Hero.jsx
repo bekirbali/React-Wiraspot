@@ -26,15 +26,15 @@ export default function Hero() {
   const [imageLoading, setImageLoading] = useState(true);
 
   return (
-    <div className="relative isolate overflow-hidden bg-[#2A1B5D] min-h-screen">
+    <div className="relative isolate overflow-hidden bg-primary-dark min-h-screen">
       {/* Background pattern */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10" />
+        <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5" />
         <div className="absolute bottom-0 w-full">
           <svg viewBox="0 0 1440 320" className="w-full">
             <path
-              fill="#231150"
-              fillOpacity="1"
+              fill="#3B2882"
+              fillOpacity="0.8"
               d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
             ></path>
           </svg>

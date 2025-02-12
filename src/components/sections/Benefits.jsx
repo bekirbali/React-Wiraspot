@@ -58,7 +58,10 @@ const itemVariants = {
 
 export default function Benefits() {
   return (
-    <div id="benefits" className="bg-primary-400 py-24 sm:py-32">
+    <div
+      id="benefits"
+      className="bg-gradient-to-b from-primary-300 to-primary-400 py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <motion.div
@@ -66,29 +69,22 @@ export default function Benefits() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl"
           >
-            <h2 className="text-base font-semibold leading-7 text-primary">
+            <h2 className="text-base font-semibold leading-7 text-primary-100">
               Everything you gain
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
               All the benefits you need
             </p>
-            <p className="mt-6 text-base leading-7 text-primary-700">
+            <p className="mt-6 text-base leading-7 text-primary-100">
               Discover why thousands of users choose our hotspot service for
               their connectivity needs.
             </p>
-
-            <motion.div
-              className="mt-10"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            ></motion.div>
           </motion.div>
 
           <motion.dl
-            className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-primary-700 sm:grid-cols-2 lg:gap-y-16"
+            className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-primary-100 sm:grid-cols-2 lg:gap-y-16"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -98,20 +94,20 @@ export default function Benefits() {
               <motion.div
                 key={benefit.title}
                 variants={itemVariants}
-                className="relative pl-9 p-4 rounded-lg transition-colors"
+                className="relative pl-9 p-6 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors"
                 whileHover={{
                   scale: 1.02,
                   transition: { duration: 0.2 },
                 }}
               >
-                <dt className="font-semibold text-primary-900">
+                <dt className="font-semibold text-white">
                   <CheckCircleIcon
-                    className="absolute left-0 top-1 h-5 w-5 text-primary"
+                    className="absolute left-4 top-7 h-5 w-5 text-primary-200"
                     aria-hidden="true"
                   />
                   {benefit.title}
                 </dt>
-                <dd className="mt-2">{benefit.description}</dd>
+                <dd className="mt-2 text-primary-200">{benefit.description}</dd>
               </motion.div>
             ))}
           </motion.dl>

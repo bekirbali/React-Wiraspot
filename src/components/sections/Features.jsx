@@ -10,27 +10,25 @@ import {
 
 const features = [
   {
-    name: "Lightning Fast Speeds",
-    description:
-      "Experience blazing-fast internet speeds up to 1Gbps, perfect for streaming, gaming, and remote work.",
-    icon: BoltIcon,
-  },
-  {
-    name: "Global Coverage",
-    description:
-      "Stay connected anywhere with our extensive network coverage across multiple countries and regions.",
-    icon: GlobeAltIcon,
-  },
-  {
-    name: "Reliable Connection",
-    description:
-      "Enjoy uninterrupted connectivity with our advanced network infrastructure and backup systems.",
+    name: "Kolay Kullanım",
+    description: "Hızlı ve kolay şekilde internete bağlanabilirsiniz.",
     icon: WifiIcon,
   },
   {
-    name: "Secure Network",
+    name: "Hızlı İnternet",
+    description: "Kullanıcı bazlı limitlendirme ile hızlı internet deneyimi.",
+    icon: BoltIcon,
+  },
+  {
+    name: "Erişim Kolaylığı",
     description:
-      "Your data is protected with enterprise-grade encryption and advanced security protocols.",
+      "Bir noktadan açtığınız hesap ile tüm pop noktalarından erişebilirsiniz.",
+    icon: GlobeAltIcon,
+  },
+  {
+    name: "Güvenli Bağlantı",
+    description:
+      "Gelişmiş güvenlik protokolleri ile verilerinizin güvenliğinden emin olabilirsiniz",
     icon: ShieldCheckIcon,
   },
 ];
@@ -61,15 +59,17 @@ export default function Features() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-base font-semibold leading-7 text-primary">
-            Everything you need
+          <h2 className="text-3xl font-bold leading-10 text-primary-600">
+            Özellikler
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl">
-            Powerful Features for Modern Connectivity
+          <p className="mt-2 text-lg font-semibold tracking-tight text-primary-900 sm:text-xl">
+            Hızlı ve Kesintisiz Kablosuz İnternet Erişimi
           </p>
           <p className="mt-6 text-lg leading-8 text-primary-600">
-            Our hotspot service comes packed with features designed to provide
-            you with the best possible internet experience.
+            Avm, Restoran, Cafe, Yurt, Park, Havuz, Oyun Sahaları veya Toplantı
+            Odaları gibi Muhtelif Mekanlarda Müşterileriniz, Konuklarınız veya
+            Mekan Sakinlerini için Hızlı ve Kesintisiz Kablosuz İnternet Erişim
+            Platformudur.
           </p>
         </motion.div>
 
@@ -85,10 +85,10 @@ export default function Features() {
               <motion.div
                 key={feature.name}
                 variants={item}
-                className="flex flex-col"
+                className="flex flex-col group hover:scale-105 transition-all duration-300"
               >
                 <dt className="text-base font-semibold leading-7 text-primary-900">
-                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600 group-hover:bg-primary-500 transition-colors">
                     <feature.icon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -104,7 +104,7 @@ export default function Features() {
           </dl>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="mt-16 sm:mt-24 flex justify-center"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -130,7 +130,7 @@ export default function Features() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

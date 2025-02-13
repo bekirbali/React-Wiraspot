@@ -5,27 +5,30 @@ const Team = () => {
     {
       name: "Ahmet Yılmaz",
       position: "CEO & Kurucu",
-      image: "/team/member1.jpg",
+      image: "/images/team/pp.jpg",
     },
     {
       name: "Ayşe Kaya",
       position: "Teknoloji Direktörü",
-      image: "/team/member2.jpg",
+      image: "/images/team/pp.jpg",
     },
     {
       name: "Mehmet Demir",
       position: "Ürün Müdürü",
-      image: "/team/member3.jpg",
+      image: "/images/team/pp.jpg",
     },
     {
       name: "Zeynep Şahin",
       position: "Müşteri İlişkileri Müdürü",
-      image: "/team/member4.jpg",
+      image: "/images/team/pp.jpg",
     },
   ];
 
   return (
-    <section id="team" className="py-20 bg-primary-dark">
+    <section
+      id="team"
+      className="py-20 bg-primary-dark border-b border-primary-500"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-12">
           Ekibimiz

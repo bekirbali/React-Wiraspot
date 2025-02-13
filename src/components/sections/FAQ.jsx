@@ -71,7 +71,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-20 bg-primary-dark">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">
+        <h2 className="text-4xl font-bold text-center text-primary-100 mb-12">
           Sıkça Sorulan Sorular
         </h2>
         <div className="max-w-3xl mx-auto space-y-4">
@@ -81,20 +81,20 @@ const FAQ = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="bg-primary-400/90 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:bg-primary-500 transition-all duration-300"
             >
               <button
                 onClick={() => toggleQuestion(item.key)}
                 className="w-full px-6 py-4 flex items-center justify-between text-left"
               >
-                <h1 className="text-xl font-semibold text-gray-800">
+                <h1 className="text-xl font-semibold text-white">
                   {item.question}
                 </h1>
                 <motion.div
                   animate={{ rotate: openKey === item.key ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ChevronDownIcon className="h-6 w-6 text-gray-500" />
+                  <ChevronDownIcon className="h-6 w-6 text-primary-light" />
                 </motion.div>
               </button>
               <AnimatePresence>
@@ -107,7 +107,7 @@ const FAQ = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-4">
-                      <p className="text-gray-600">{item.answer}</p>
+                      <p className="text-gray-300">{item.answer}</p>
                     </div>
                   </motion.div>
                 )}

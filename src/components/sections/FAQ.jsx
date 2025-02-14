@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
   const [openKey, setOpenKey] = useState("what-is-wiraspot");
-  const router = useRouter();
+  // const router = useRouter();
 
   const faqItems = [
     {
@@ -47,12 +47,12 @@ const FAQ = () => {
     },
   ];
 
-  useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash) {
-      setOpenKey(hash);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const hash = window.location.hash.replace("#", "");
+  //   if (hash) {
+  //     setOpenKey(hash);
+  //   }
+  // }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -62,11 +62,11 @@ const FAQ = () => {
     const newKey = openKey === key ? null : key;
     setOpenKey(newKey);
 
-    if (newKey !== null) {
-      router.push(`#${key}`, { scroll: false });
-    } else {
-      router.push("#", { scroll: false });
-    }
+    // if (newKey !== null) {
+    //   router.push(`#${key}`, { scroll: false });
+    // } else {
+    //   router.push("#", { scroll: false });
+    // }
   };
   return (
     <section id="faq" className="py-20 bg-primary-dark">

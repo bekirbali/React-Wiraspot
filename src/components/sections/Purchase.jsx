@@ -41,6 +41,17 @@ const Purchase = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-primary-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 64;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
               >
                 Hemen Satın Al
               </motion.button>
@@ -111,6 +122,17 @@ const Purchase = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-white text-primary-900 py-3 px-4 rounded-xl font-semibold hover:bg-primary-100 transition-colors duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 64;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
               >
                 Hemen Satın Al
               </motion.button>
@@ -178,6 +200,17 @@ const Purchase = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-primary-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 64;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
               >
                 Hemen Satın Al
               </motion.button>
@@ -244,6 +277,17 @@ const Purchase = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-primary-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 64;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
               >
                 Hemen Satın Al
               </motion.button>

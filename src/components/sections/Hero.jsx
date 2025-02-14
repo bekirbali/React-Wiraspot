@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-const socialIcons = [
-  { name: "wordpress", color: "#21759b" },
-  { name: "youtube", color: "#FF0000" },
-  { name: "dropbox", color: "#0061FF" },
-  { name: "facebook", color: "#1877F2" },
-  { name: "instagram", color: "#E4405F" },
-  { name: "linkedin", color: "#0A66C2" },
-  { name: "android", color: "#3DDC84" },
-  { name: "behance", color: "#1769FF" },
-  { name: "whatsapp", color: "#25D366" },
-  { name: "apple", color: "#000000" },
-  { name: "wifi", color: "#4285F4" },
-  { name: "windows", color: "#00A4EF" },
-  { name: "yahoo", color: "#6001D2" },
-  { name: "skype", color: "#00AFF0" },
-  { name: "pinterest", color: "#E60023" },
-];
+// const socialIcons = [
+//   { name: "wordpress", color: "#21759b" },
+//   { name: "youtube", color: "#FF0000" },
+//   { name: "dropbox", color: "#0061FF" },
+//   { name: "facebook", color: "#1877F2" },
+//   { name: "instagram", color: "#E4405F" },
+//   { name: "linkedin", color: "#0A66C2" },
+//   { name: "android", color: "#3DDC84" },
+//   { name: "behance", color: "#1769FF" },
+//   { name: "whatsapp", color: "#25D366" },
+//   { name: "apple", color: "#000000" },
+//   { name: "wifi", color: "#4285F4" },
+//   { name: "windows", color: "#00A4EF" },
+//   { name: "yahoo", color: "#6001D2" },
+//   { name: "skype", color: "#00AFF0" },
+//   { name: "pinterest", color: "#E60023" },
+// ];
 
 export default function Hero() {
   const [imageLoading, setImageLoading] = useState(true);
@@ -79,14 +79,6 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               Demo Talebi
-            </motion.a>
-            <motion.a
-              href="#features"
-              className="rounded-full bg-indigo-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Ios Uygulama
             </motion.a>
           </motion.div>
         </motion.div>

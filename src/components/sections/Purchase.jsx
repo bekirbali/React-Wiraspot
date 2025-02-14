@@ -24,10 +24,10 @@ const Purchase = () => {
 
         <div className="flex flex-col gap-8 max-w-5xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            transition={{ duration: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col md:flex-row gap-8"
           >
             <div className="md:w-1/3">
@@ -91,10 +91,10 @@ const Purchase = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.2 }}
             className="bg-primary-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col md:flex-row gap-8 relative"
           >
             <div className="absolute top-0 right-0 bg-primary-300 text-primary-900 text-sm font-semibold px-4 py-1 rounded-tr-2xl rounded-bl-2xl">
@@ -161,10 +161,10 @@ const Purchase = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            transition={{ delay: 0.4, duration: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col md:flex-row gap-8"
           >
             <div className="md:w-1/3">
@@ -227,10 +227,10 @@ const Purchase = () => {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            transition={{ delay: 0.6, duration: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col md:flex-row gap-8"
           >
             <div className="md:w-1/3">

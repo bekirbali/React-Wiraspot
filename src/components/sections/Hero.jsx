@@ -98,7 +98,7 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 1 }}
         >
           <div className="relative w-[600px] h-[600px]">
-            {socialIcons.map((icon, index) => {
+            {/* {socialIcons.map((icon, index) => {
               const angle =
                 (index * (360 / socialIcons.length) * Math.PI) / 180;
               const radius = 250; // Adjust this value to change the circle size
@@ -128,7 +128,28 @@ export default function Hero() {
                   </div>
                 </motion.div>
               );
-            })}
+            })} */}
+            {/* <Image
+              src="/images/hotspot.jpg"
+              alt="Hero Image"
+              width={600}
+              height={600}
+              className="rounded-full"
+            /> */}
+            {/* <Image
+              src="/images/hotspot11.jpg"
+              alt="Hero Image"
+              width={600}
+              height={600}
+              className="rounded-full"
+            /> */}
+            <Image
+              src="/images/hotspot22.png"
+              alt="Hero Image"
+              width={600}
+              height={600}
+              className="rounded-full"
+            />
           </div>
         </motion.div>
       </div>

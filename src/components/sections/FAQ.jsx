@@ -63,9 +63,9 @@ const FAQ = () => {
     setOpenKey(newKey);
 
     if (newKey !== null) {
-      window.history.pushState(null, "", `#${key}`);
+      router.push(`#${key}`, { scroll: false });
     } else {
-      window.history.pushState(null, "", "#");
+      router.push("#", { scroll: false });
     }
   };
   return (
@@ -107,7 +107,7 @@ const FAQ = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-4">
-                      <p className="text-gray-300">{item.answer}</p>
+                      <p className="text-primary-100">{item.answer}</p>
                     </div>
                   </motion.div>
                 )}

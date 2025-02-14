@@ -35,7 +35,17 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="cursor-pointer">
-            <Link href="/" className="flex items-center">
+            <Link
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+              className="flex items-center"
+            >
               <span className="text-2xl font-bold text-primary-900">
                 WiraSpot
               </span>
@@ -63,23 +73,23 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6 text-white" />
+              <XMarkIcon className="h-6 w-6 text-primary-900" />
             ) : (
-              <Bars3Icon className="h-6 w-6 text-white" />
+              <Bars3Icon className="h-6 w-6 text-primary-900" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 absolute top-16 left-0 right-0 bg-black/95 shadow-lg">
+          <div className="md:hidden py-4 absolute top-16 left-0 right-0 bg-primary-900 shadow-lg">
             <div className="flex flex-col space-y-4 px-4">
               {navigation.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className="text-gray-300 hover:text-white cursor-pointer transition-colors"
+                  className="text-white hover:text-primary-200 cursor-pointer transition-colors"
                 >
                   {link.name}
                 </a>

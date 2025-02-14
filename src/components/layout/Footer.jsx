@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 
 const navigation = {
   main: [
-    { name: "About", href: "#" },
-    { name: "Features", href: "#features" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
+    { name: "Satın Al", href: "#purchase" },
+    { name: "Nasıl Bağlanırım", href: "#how-to-connect" },
+    { name: "Özellikler", href: "#features" },
+    { name: "Ekibimiz", href: "#team" },
+    { name: "SSS", href: "#faq" },
+    { name: "İletişim", href: "#contact" },
   ],
   social: [
     {
@@ -53,7 +54,7 @@ const navigation = {
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
-            d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.418-4.814c.23-.861.907-1.538 1.768-1.768C5.746 5 12 5 12 5s6.254 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
             clipRule="evenodd"
           />
         </svg>
@@ -64,38 +65,50 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+    <footer className="bg-primary-600">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <motion.nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:order-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
-              <a
-                href={item.href}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            </div>
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium leading-6 text-primary-100 hover:text-primary-200 transition-colors duration-200"
+            >
+              {item.name}
+            </a>
           ))}
         </motion.nav>
+
         <motion.div
-          className="mt-10 flex justify-center space-x-10"
+          className="mt-8 md:order-1 md:mt-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          <p className="text-center text-sm leading-5 text-primary-100">
+            &copy; {new Date().getFullYear()} Wiraspot. All rights reserved.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="mt-8 flex justify-center space-x-6 md:order-3 md:mt-0"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
         >
           {navigation.social.map((item) => (
             <motion.a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-primary-100 hover:text-primary-200"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -104,15 +117,6 @@ export default function Footer() {
             </motion.a>
           ))}
         </motion.div>
-        <motion.p
-          className="mt-10 text-center text-xs leading-5 text-gray-500"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        >
-          &copy; {new Date().getFullYear()} Wiraspot. All rights reserved.
-        </motion.p>
       </div>
     </footer>
   );

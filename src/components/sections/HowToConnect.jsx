@@ -4,19 +4,21 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "1",
-    title: "Üyelik Oluşturun",
-    description: "Hızlı ve kolay bir şekilde üyelik oluşturarak başlayın.",
+    title: "Cihazınızın Wi-Fi özelliğini açın!",
+    description:
+      "Kablosuz ağlardan “Wifinoktam” ağını seçin, cihazınızda yüklü web tarayıcınız ile otomatik olarak karşılama sayfasına yönlendirileceksiniz.",
   },
   {
     number: "2",
-    title: "Paketi Seçin",
-    description: "İhtiyacınıza uygun paketi seçin ve satın alın.",
+    title: "Wifinoktam'a Kayıt Olun!",
+    description:
+      "Karşılama ekranından kayıt ol kısmını tıklayarak kaydınızı oluşturabilir ve sms ile gelen doğrulama kodunu sisteme girerek aktivasyonunuzu sağlayabilirsiniz.",
   },
   {
     number: "3",
-    title: "Bağlantıyı Kurun",
+    title: "İnternet'e Bağlanın",
     description:
-      "Kurulum talimatlarını takip ederek hemen bağlanmaya başlayın.",
+      "Kayıt ve aktivasyon işlemlerinden sonra internete çıkış yapabilir, tüm wifinoktam pop noktalarından aynı kullanıcı bilgileri ile giriş yapabilirsiniz.",
   },
 ];
 
@@ -37,6 +39,11 @@ const HowToConnect = () => {
           <h2 className="text-4xl font-bold text-white mb-4">
             Nasıl Bağlanırım?
           </h2>
+          <p className="text-primary-100 leading-relaxed">
+            Cafe, restoran, avm yani wifinoktam’ ın olduğu her yerde telefon,
+            tablet ve bilgisayarınızdan internete kolaylıkla erişim
+            sağlayabilirsiniz.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
@@ -50,7 +57,7 @@ const HowToConnect = () => {
               className="text-center flex flex-col items-center"
             >
               <motion.div
-                className="w-16 h-16 rounded-full bg-primary-400 flex items-center justify-center mb-6 shadow-lg shadow-primary-900/50"
+                className="w-16 h-16 rounded-full bg-primary-300 flex items-center justify-center mb-6 shadow-lg shadow-primary-900/50"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -61,7 +68,7 @@ const HowToConnect = () => {
               <h3 className="text-xl font-bold text-white mb-4">
                 {step.title}
               </h3>
-              <p className="text-primary-200 leading-relaxed">
+              <p className="text-primary-100 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>
@@ -78,7 +85,7 @@ const HowToConnect = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary-400 text-primary-900 py-3 px-8 rounded-full font-semibold hover:bg-primary-300 transition-colors duration-300 shadow-lg shadow-primary-900/50"
+            className="bg-primary-300 text-primary-900 py-3 px-8 rounded-full font-semibold hover:bg-primary-300 transition-colors duration-300 shadow-lg shadow-primary-900/50"
           >
             Hemen Başla
           </motion.button>

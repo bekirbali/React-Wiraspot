@@ -18,7 +18,7 @@ export default function Home() {
       <Purchase />
       <HowToConnect />
       <Features />
-      <Team />
+      {/* <Team /> */}
       <FAQ />
       <Contact />
       <Footer />

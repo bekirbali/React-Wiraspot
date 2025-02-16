@@ -171,7 +171,8 @@ const Contact = () => {
                   <MapPinIcon className="h-6 w-6 text-primary-500 flex-shrink-0" />
                   <div>
                     <p className="text-gray-700">
-                      Arnavutköy, İslambey, 34283 Arnavutköy/İstanbul
+                      Esentepe Mah. Şehit Mithat Uluünlü Sk No: 26/26, 34394
+                      Şişli/İstanbul
                     </p>
                   </div>
                 </div>
@@ -194,7 +195,7 @@ const Contact = () => {
             <div className="mt-8">
               <div className="w-full h-[300px] bg-gray-100 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d8492.225885172122!2d28.73635688261615!3d41.19004728352255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m5!1s0x14caabbacc6e11d3%3A0x4ea55f8af42204ea!2sArnavutk%C3%B6y!3m2!1d41.186394!2d28.738889!4m3!3m2!1d41.1865892!2d28.7392523!5e0!3m2!1str!2str!4v1739534971941!5m2!1str!2str"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d265.8609228626768!2d29.010804268388576!3d41.0717690148597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab65b32f7294f%3A0x4a1ed0d979c506c1!2zRXNlbnRlcGUsIE1pdGhhdCBVbHUgw5xubMO8IFNrIE5vOiAyNi8yLCAzNDM5NCDFnmnFn2xpL8Swc3RhbmJ1bA!5e0!3m2!1sen!2str!4v1739665520845!5m2!1sen!2str"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

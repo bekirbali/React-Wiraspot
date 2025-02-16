@@ -6,11 +6,11 @@ const steps = [
     number: "1",
     title: "Cihazınızın Wi-Fi özelliğini açın!",
     description:
-      "Kablosuz ağlardan “Wifinoktam” ağını seçin, cihazınızda yüklü web tarayıcınız ile otomatik olarak karşılama sayfasına yönlendirileceksiniz.",
+      "Kablosuz ağlardan Wiraspot ağını seçin, cihazınızda yüklü web tarayıcınız ile otomatik olarak karşılama sayfasına yönlendirileceksiniz.",
   },
   {
     number: "2",
-    title: "Wifinoktam'a Kayıt Olun!",
+    title: "Wiraspot' a Kayıt Olun!",
     description:
       "Karşılama ekranından kayıt ol kısmını tıklayarak kaydınızı oluşturabilir ve sms ile gelen doğrulama kodunu sisteme girerek aktivasyonunuzu sağlayabilirsiniz.",
   },
@@ -18,7 +18,7 @@ const steps = [
     number: "3",
     title: "İnternet'e Bağlanın",
     description:
-      "Kayıt ve aktivasyon işlemlerinden sonra internete çıkış yapabilir, tüm wifinoktam pop noktalarından aynı kullanıcı bilgileri ile giriş yapabilirsiniz.",
+      "Kayıt ve aktivasyon işlemlerinden sonra internete çıkış yapabilir, tüm Wiraspot pop noktalarından aynı kullanıcı bilgileri ile giriş yapabilirsiniz.",
   },
 ];
 
@@ -40,7 +40,7 @@ const HowToConnect = () => {
             Nasıl Bağlanırım?
           </h2>
           <p className="text-primary-100 leading-relaxed">
-            Cafe, restoran, avm yani wifinoktam’ ın olduğu her yerde telefon,
+            Cafe, restoran, avm yani Wiraspot' un olduğu her yerde telefon,
             tablet ve bilgisayarınızdan internete kolaylıkla erişim
             sağlayabilirsiniz.
           </p>

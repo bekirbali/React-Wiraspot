@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 // const socialIcons = [
 //   { name: "wordpress", color: "#21759b" },
@@ -25,9 +27,88 @@ import { useState } from "react";
 export default function Hero() {
   const [imageLoading, setImageLoading] = useState(true);
 
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesOptions = {
+    particles: {
+      number: {
+        value: 50,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      color: {
+        value: "#ffffff",
+      },
+      opacity: {
+        value: 0.3,
+      },
+      size: {
+        value: 3,
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        outModes: {
+          default: "out",
+        },
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.2,
+        width: 1,
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "grab",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          links: {
+            opacity: 0.5,
+          },
+        },
+        push: {
+          quantity: 4,
+        },
+      },
+    },
+    background: {
+      color: "transparent",
+    },
+    fullScreen: {
+      enable: false,
+      zIndex: 0,
+    },
+    detectRetina: true,
+  };
+
   return (
     <div className="relative isolate overflow-hidden bg-primary-dark min-h-screen">
       {/* Background pattern */}
+
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 opacity-5" />
         <div className="absolute bottom-0 w-full overflow-hidden">
@@ -74,10 +155,10 @@ export default function Hero() {
         <div className="absolute bottom-0 w-full overflow-hidden">
           <motion.div
             animate={{
-              x: [0, -1440],
+              x: [0, -2440],
             }}
             transition={{
-              duration: 60,
+              duration: 50,
               repeat: Infinity,
               ease: "linear",
             }}
@@ -112,6 +193,11 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+        <Particles
+          className="absolute inset-0 h-[750px]"
+          init={particlesInit}
+          options={particlesOptions}
+        />
         <motion.div
           className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"
           initial={{ opacity: 0, y: 20 }}

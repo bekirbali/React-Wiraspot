@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const steps = [
   {
@@ -82,13 +83,15 @@ const HowToConnect = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-primary-300 text-primary-900 py-3 px-8 rounded-full font-semibold hover:bg-primary-300 transition-colors duration-300 shadow-lg shadow-primary-900/50"
-          >
-            Hemen Başla
-          </motion.button>
+          <a href="#contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-primary-300 text-primary-900 py-3 px-8 rounded-full font-semibold hover:bg-primary-300 transition-colors duration-300 shadow-lg shadow-primary-900/50"
+            >
+              Hemen Başla
+            </motion.button>
+          </a>
         </motion.div>
       </div>
     </section>

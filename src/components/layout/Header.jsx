@@ -89,14 +89,16 @@ const Header = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className={`hover:text-primary-200 cursor-pointer transition-colors ${
-                  isScrolled ? "text-white" : "text-primary-900"
+                className={`cursor-pointer transition-colors text-[15px] ${
+                  isScrolled
+                    ? "text-white hover:text-primary-200"
+                    : "text-primary-900 hover:text-primary-500"
                 }`}
               >
                 {link.name}
@@ -106,7 +108,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -128,7 +130,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 absolute top-20 left-0 right-0 bg-primary-900 shadow-lg">
+          <div className="lg:hidden py-4 absolute top-20 left-0 right-0 bg-primary-900 shadow-lg">
             <div className="flex flex-col space-y-4 px-4">
               {navigation.map((link) => (
                 <a

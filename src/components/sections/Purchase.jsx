@@ -23,14 +23,14 @@ const Purchase = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="flex flex-col justify-between bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-          >
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="flex flex-col justify-between bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-primary-900 mb-2">
               Aylık Paket
             </h3>
@@ -46,15 +46,9 @@ const Purchase = () => {
                 Hemen Satın Al
               </motion.button>
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="bg-primary-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 transform scale-105 relative"
-          >
+          <div className="bg-primary-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative">
             <div className="absolute top-0 right-0 bg-primary-300 text-primary-900 text-sm font-semibold px-4 py-1 rounded-tr-2xl rounded-bl-2xl">
               Popüler
             </div>
@@ -72,15 +66,9 @@ const Purchase = () => {
                 Hemen Satın Al
               </motion.button>
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="flex flex-col justify-between bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-          >
+          <div className="flex flex-col justify-between bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-primary-900 mb-2">
               Standart Paket
             </h3>
@@ -96,14 +84,9 @@ const Purchase = () => {
                 Hemen Satın Al
               </motion.button>
             </a>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="flex flex-col justify-between bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-          >
+          </div>
+
+          <div className="flex flex-col justify-between bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-primary-900 mb-2">
               Limitsiz Paket
             </h3>
@@ -119,8 +102,8 @@ const Purchase = () => {
                 Hemen Satın Al
               </motion.button>
             </a>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

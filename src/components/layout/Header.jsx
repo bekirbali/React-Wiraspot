@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon, WifiIcon } from "@heroicons/react/24/outline";
 
@@ -71,7 +70,7 @@ const Header = () => {
                 <span className="relative">
                   o
                   <WifiIcon
-                    className={`w-5 h-5 absolute -z-10 top-1 left-1/2 -translate-x-1/2 ${
+                    className={`w-5 h-5 absolute top-0 -z-10  left-1/2 -translate-x-1/2 ${
                       isScrolled ? "text-blue-500" : "text-blue-700"
                     }`}
                   />

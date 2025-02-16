@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import Modal from "../ui/Modal";
+import DemoForm from "../ui/DemoForm";
 
 // const socialIcons = [
 //   { name: "wordpress", color: "#21759b" },
@@ -25,8 +27,7 @@ import { loadSlim } from "tsparticles-slim";
 // ];
 
 export default function Hero() {
-  const [imageLoading, setImageLoading] = useState(true);
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
@@ -205,7 +206,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            className="mt-20 md:mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -228,14 +229,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <motion.a
-              href="#contact"
-              className="rounded-full bg-indigo-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400"
+            <motion.button
+              onClick={() => setIsModalOpen(true)}
+              className="rounded-full bg-indigo-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 z-50"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Demo Talebi
-            </motion.a>
+            </motion.button>
           </motion.div>
         </motion.div>
 
@@ -301,6 +302,10 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <DemoForm onClose={() => setIsModalOpen(false)} />
+      </Modal>
     </div>
   );
 }

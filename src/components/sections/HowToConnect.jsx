@@ -47,14 +47,16 @@ const HowToConnect = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          {steps.map((step, index) => (
-            <motion.div
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {steps.map((step) => (
+            <div
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
               className="text-center flex flex-col items-center"
             >
               <motion.div
@@ -72,16 +74,16 @@ const HowToConnect = () => {
               <p className="text-primary-100 leading-relaxed">
                 {step.description}
               </p>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a href="#contact">
             <motion.button

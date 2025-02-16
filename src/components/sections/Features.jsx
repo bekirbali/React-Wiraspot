@@ -33,21 +33,6 @@ const features = [
   },
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
-
 export default function Features() {
   return (
     <div id="features" className="bg-primary-100 py-24 sm:py-32">
@@ -74,17 +59,16 @@ export default function Features() {
         </motion.div>
 
         <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"
         >
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
             {features.map((feature) => (
-              <motion.div
+              <div
                 key={feature.name}
-                variants={item}
                 className="flex flex-col group hover:scale-105 transition-all duration-300"
               >
                 <dt className="text-base font-semibold leading-7 text-primary-900">
@@ -99,7 +83,7 @@ export default function Features() {
                 <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-primary-600">
                   <p className="flex-auto">{feature.description}</p>
                 </dd>
-              </motion.div>
+              </div>
             ))}
           </dl>
         </motion.div>

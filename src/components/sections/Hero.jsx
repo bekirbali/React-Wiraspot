@@ -29,15 +29,85 @@ export default function Hero() {
     <div className="relative isolate overflow-hidden bg-primary-dark min-h-screen">
       {/* Background pattern */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5" />
-        <div className="absolute bottom-0 w-full">
-          <svg viewBox="0 0 1440 320" className="w-full">
-            <path
-              fill="#3B2882"
-              fillOpacity="0.8"
-              d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
+        <div className="absolute inset-0 opacity-5" />
+        <div className="absolute bottom-0 w-full overflow-hidden">
+          <motion.div
+            animate={{
+              x: [0, -1440],
+            }}
+            transition={{
+              duration: 60,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="flex"
+          >
+            <Image
+              src="/images/wave1.svg"
+              alt="Wave Background"
+              width={1440}
+              height={320}
+              className="w-[1440px] flex-shrink-0"
+              priority
+            />
+            <Image
+              src="/images/wave1.svg"
+              alt="Wave Background"
+              width={1440}
+              height={320}
+              className="w-[1440px] flex-shrink-0"
+              priority
+            />
+            <Image
+              src="/images/wave1.svg"
+              alt="Wave Background"
+              width={1440}
+              height={320}
+              className="w-[1440px] flex-shrink-0"
+              priority
+            />
+          </motion.div>
+        </div>
+      </div>
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 opacity-5" />
+        <div className="absolute bottom-0 w-full overflow-hidden">
+          <motion.div
+            animate={{
+              x: [0, -1440],
+            }}
+            transition={{
+              duration: 60,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="flex"
+          >
+            <Image
+              src="/images/wave1.svg"
+              alt="Wave Background"
+              width={1440}
+              height={320}
+              className="w-[1440px] flex-shrink-0"
+              priority
+            />
+            <Image
+              src="/images/wave1.svg"
+              alt="Wave Background"
+              width={1440}
+              height={320}
+              className="w-[1440px] flex-shrink-0"
+              priority
+            />
+            <Image
+              src="/images/wave1.svg"
+              alt="Wave Background"
+              width={1440}
+              height={320}
+              className="w-[1440px] flex-shrink-0"
+              priority
+            />
+          </motion.div>
         </div>
       </div>
 

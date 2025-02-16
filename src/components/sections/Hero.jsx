@@ -54,7 +54,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            5651' Uygun Yasal Loglama
+            KVKK UYUMLU YASAL 5651 LOGLAMA
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-gray-300"
@@ -63,7 +63,7 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             Yasa gereği internet hizmetini paylaştığınız kullanıcıların kayıt
-            altına alınması gerekmektedir.Wifinoktam mevzuata uygun alt yapı ve
+            altına alınması gerekmektedir. Wiraspot mevzuata uygun alt yapı ve
             işgücü yatırıma gerek duymadan çözümler sunmaktadır.
           </motion.p>
           <motion.div

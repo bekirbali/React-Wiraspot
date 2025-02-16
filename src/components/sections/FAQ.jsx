@@ -10,40 +10,40 @@ const FAQ = () => {
 
   const faqItems = [
     {
-      key: "what-is-wiraspot",
-      question: "Wiraspot nedir?",
+      key: "wiraspot-nedir",
+      question: "Wiraspot Hotspot nedir?",
       answer:
-        "Wiraspot, güvenli ve hızlı internet erişimi sağlayan yenilikçi bir VPN hizmetidir. Kullanıcılarımıza özel şifreleme teknolojileri ile güvenli bir bağlantı sunuyoruz.",
+        "İnternete erişmek isteyen kullanıcılar, mekanınızda kablosuz ağa şifresiz olarak bağlanır. Wiraspot üzerinden internet erişimine ulaşmak için kayıt ve sms onayı gerektirmektedir. Kayıt olup giriş yapan kullanıcıların 5156 sayılı kanuna göre logları tutulmaktadır.",
     },
     {
-      key: "how-to-register",
-      question: "Nasıl üye olabilirim?",
+      key: "5651-no-lu-yasaya-uygun-mu",
+      question: "5651 No’lu Yasaya Uygun mu?",
       answer:
-        'Üyelik işlemi için web sitemizden "Üye Ol" butonuna tıklayarak gerekli bilgileri doldurmanız yeterlidir. Ardından e-posta doğrulaması yaparak hesabınızı aktifleştirebilirsiniz.',
+        "İnternet ortamında işlenen belirli suçlarla içerik, yer ve erişim sağlayıcıları üzerinden mücadeleye ilişkin esas ve usûlleri düzenlemek amacıyla oluşturulan 5651 sayılı yasa gereği internet hizmetini paylaştığınız kullanıcıların kayıt altına alınması gerekmektedir. Ayrıca alınan kayıtların 1 yıl süreyle saklanması ve talep edildiğinde ilgili mercilerle paylaşılması zorunluluğu bulunmaktadır. Tüm bu yükümlülükler için gerekli olan altyapı ve işgücü yatırımına gerek duymadan, hukuki tüm sorumluluklarınızı Wiraspot üstlenmektedir.",
     },
     {
-      key: "supported-devices",
-      question: "Hangi cihazlarda kullanabilirim?",
+      key: "kurulum-destegi-var-mi",
+      question: "Kurulum Desteğiniz Var mı?",
       answer:
-        "Wiraspot, Windows, Mac, iOS, Android ve Linux işletim sistemlerinde kullanılabilir. Aynı anda birden fazla cihazda kullanım seçeneği paketinize göre değişiklik gösterebilir.",
+        "Wiraspot tarafınıza iletilecek cihaz ile tak çalıştır mantığı ile çalışmaktadır.Kurulum desteği talep edildiğinde uzak bağlantı sağlanarak kurulum yapılmaktadır.Yerinde kurulum desteği talep edildiğinde teknik ekibimiz yönlendirilmektedir.",
     },
     {
-      key: "payment-options",
-      question: "Ödeme seçenekleri nelerdir?",
+      key: "yuksek-yatirim-maliyeti-gerekir-mi",
+      question: "Yüksek Yatırım Maliyeti Gerekir mi?",
       answer:
-        "Kredi kartı, banka kartı ve havale/EFT ile ödeme yapabilirsiniz. Ödemeleriniz SSL sertifikası ile güvence altındadır.",
+        "Wiraspot hizmetiyle, kesintisiz ve sorunsuz bir internet erişimi için bir yatırım bütçesi ayırmanıza gerek kalmaz; tüm teknolojik donanım güncellemesiyle birlikte, gereken tüm maliyetler Wiraspot tarafından karşılanır ve hizmetinize sunulur.",
     },
     {
-      key: "refund-policy",
-      question: "İptal ve iade politikanız nedir?",
+      key: "donanim-arizasi-olur-mu",
+      question: "Donanım Arızası ile Karşılaşır mıyız?",
       answer:
-        "Satın alma işleminden sonraki 14 gün içerisinde iade talep edebilirsiniz. İptal işlemleri için müşteri hizmetlerimizle iletişime geçmeniz yeterlidir.",
+        "Wiraspot hizmetiyle tarafınıza sunulan tüm altyapı donanımı 7 gün 24 saat izlenmektedir. Olası cihaz arızalarında yerinde müdahale yapılarak, arızalı cihazlar için anında değişim gerçekleştirilmektedir.",
     },
     {
-      key: "technical-support",
-      question: "Teknik destek alabilir miyim?",
+      key: "telefon-destegi-mevcut-mu",
+      question: "Telefon Desteğiniz Mevcut mudur?",
       answer:
-        "7/24 teknik destek ekibimiz size yardımcı olmak için hazır. Canlı destek, e-posta veya telefon üzerinden bizimle iletişime geçebilirsiniz.",
+        "İnternet erişimi ile ilgili her türlü problemde Wiraspot tarafından sunulan ve mesai saatleri içerisinde hizmet veren Çağrı Merkezi’ni arayarak destek alabilirsiniz.",
     },
   ];
 
@@ -71,9 +71,14 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-20 bg-primary-dark">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-primary-100 mb-12">
-          Sıkça Sorulan Sorular
-        </h2>
+        <div className="flex flex-col items-center gap-4 justify-center mb-12">
+          <h2 className="text-4xl font-bold text-center text-primary-100 ">
+            Sıkça Sorulan Sorular
+          </h2>
+          <p className="text-primary-100 text-center text-lg">
+            Merak ettiğiniz sorular için bir telefon kadar yakınız.
+          </p>
+        </div>
         <div className="max-w-3xl mx-auto space-y-4">
           {faqItems.map((item) => (
             <motion.div
@@ -94,7 +99,7 @@ const FAQ = () => {
                   animate={{ rotate: openKey === item.key ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ChevronDownIcon className="h-6 w-6 text-primary-light" />
+                  <ChevronDownIcon className="h-6 w-6 text-primary-100" />
                 </motion.div>
               </button>
               <AnimatePresence>

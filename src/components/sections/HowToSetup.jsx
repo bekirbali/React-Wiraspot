@@ -6,13 +6,13 @@ const HowToSetup = () => {
     {
       title: "Cihaz Kurulumu",
       description:
-        "Kurulum yapılacak mekana göre cihaz tercih edilerek wifinokta yazılımları cihaza yüklenir.",
+        "Kurulum yapılacak mekana göre cihaz tercih edilerek wiraspot yazılımları cihaza yüklenir.",
       icon: "/images/setup/cihazkurulumu.svg", // Using emoji as placeholder, you might want to replace with actual icon
     },
     {
       title: "Entegrasyon",
       description:
-        "Wifinokta cihaz,sunucu, web arayüzü olmak üzere 3 platform üzerinden çalışmaktadır.Platformların entegrasyonu yapılarak kontrol edilmektedir.",
+        "Wiraspot cihaz,sunucu, web arayüzü olmak üzere 3 platform üzerinden çalışmaktadır.Platformların entegrasyonu yapılarak kontrol edilmektedir.",
       icon: "/images/setup/entegrasyon.svg", // Using emoji as placeholder, you might want to replace with actual icon
     },
     {

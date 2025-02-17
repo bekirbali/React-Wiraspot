@@ -7,6 +7,10 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "https://wiraspot.com"
   ),
+  icons: {
+    icon: [{ url: "/wifi.ico", sizes: "any" }],
+    apple: { url: "/wifi.ico" },
+  },
   title: "Wiraspot - High-Speed Internet Anywhere",
   description:
     "Experience lightning-fast connectivity with our advanced hotspot service. Stay connected wherever life takes you.",
@@ -26,7 +30,7 @@ export const metadata = {
     siteName: "Wiraspot",
     images: [
       {
-        url: "/og-image.png",
+        url: "/wifi.ico",
         width: 1200,
         height: 630,
         alt: "Wiraspot - High-Speed Internet Anywhere",
@@ -40,7 +44,7 @@ export const metadata = {
     title: "Wiraspot - High-Speed Internet Anywhere",
     description:
       "Experience lightning-fast connectivity with our advanced hotspot service. Stay connected wherever life takes you.",
-    images: ["/twitter-image.png"],
+    images: ["/wifi.ico"],
     creator: "@wiraspot",
   },
   robots: {
@@ -67,6 +71,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
+        <link rel="shortcut icon" href="/wifi.ico" />
       </head>
       <body
         className={`${inter.className} min-h-screen bg-background font-sans antialiased`}

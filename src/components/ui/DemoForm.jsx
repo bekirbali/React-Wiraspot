@@ -18,7 +18,7 @@ export default function DemoForm({ onClose }) {
     emailjs
       .send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID_DEMO,
         formData,
         process.env.NEXT_PUBLIC_MAIL_KEY
       )

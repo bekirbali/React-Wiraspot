@@ -65,13 +65,13 @@ export default function Features() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+          <dl className="grid max-w-xl grid-cols-1 justify-items-center lg:justify-items-start gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="flex flex-col group hover:scale-105 transition-all duration-300"
+                className="flex flex-col items-center lg:items-start group hover:scale-105 transition-all duration-300"
               >
-                <dt className="text-base font-semibold leading-7 text-primary-900">
+                <dt className="text-base flex flex-col items-center lg:items-start font-semibold leading-7 text-primary-900">
                   <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600 group-hover:bg-primary-500 transition-colors">
                     <feature.icon
                       className="h-6 w-6 text-white"
@@ -80,7 +80,7 @@ export default function Features() {
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-primary-600">
+                <dd className="mt-1 flex flex-auto text-center lg:text-left flex-col text-base leading-7 text-primary-600">
                   <p className="flex-auto">{feature.description}</p>
                 </dd>
               </div>

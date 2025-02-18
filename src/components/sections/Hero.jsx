@@ -206,7 +206,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="mt-20 md:mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            className="mt-20 md:mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl !pl-0 !ml-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}

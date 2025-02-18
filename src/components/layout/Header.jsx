@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon, WifiIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+import Modal from "../ui/Modal";
+import DemoForm from "../ui/DemoForm";
 
 const navigation = [
   { name: "SATIN AL", href: "#purchase" },
@@ -16,6 +19,7 @@ const navigation = [
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +47,13 @@ const Header = () => {
 
   return (
     <nav
-      className={`fixed  w-full backdrop-blur-sm z-50 shadow-sm transition-colors duration-500 ${
+      className={`fixed w-full backdrop-blur-sm z-50 shadow-sm transition-colors duration-500 ${
         isScrolled ? "bg-primary-900/95" : "bg-primary-100/90"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="cursor-pointer pt-4">
+          <div className="cursor-pointer pt-4 scale-105">
             <Link
               href="/"
               onClick={(e) => {
@@ -59,7 +63,7 @@ const Header = () => {
                   behavior: "smooth",
                 });
               }}
-              className="flex flex-col"
+              className="flex flex-col pl-[2px]"
             >
               <span
                 className={`text-3xl font-extrabold tracking-wider transition-colors duration-300 relative ${
@@ -78,11 +82,11 @@ const Header = () => {
                 t
               </span>
               <span
-                className={`text-sm text-right font-medium tracking-wide transition-colors duration-300 -mt-0.5 ${
+                className={`spot text-sm text-right font-medium tracking-wide transition-colors duration-300 -mt-0.5 ${
                   isScrolled ? "text-white" : "text-primary-900"
                 }`}
               >
-                güvenli bağlan
+                Bağlantı Noktası
               </span>
             </Link>
           </div>
@@ -103,6 +107,21 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
+            <motion.button
+              onClick={() => setIsModalOpen(true)}
+              className={`rounded-full px-8 py-3 text-sm font-semibold shadow-sm z-50 ${
+                isScrolled
+                  ? "bg-primary-300 text-primary-900 hover:bg-primary-100"
+                  : "bg-primary-700 text-white hover:bg-primary-500"
+              }`}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Demo Talebi
+            </motion.button>
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+              <DemoForm onClose={() => setIsModalOpen(false)} />
+            </Modal>
           </div>
 
           {/* Mobile Menu Button */}
@@ -141,6 +160,14 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
+              <motion.button
+                onClick={() => setIsModalOpen(true)}
+                className={`rounded-full px-8 py-3 text-sm font-semibold shadow-sm z-50 bg-primary-300 text-primary-900 hover:!bg-primary-100`}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Demo Talebi
+              </motion.button>
             </div>
           </div>
         )}

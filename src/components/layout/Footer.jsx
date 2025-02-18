@@ -9,7 +9,7 @@ const navigation = {
     { name: "Özellikler", href: "#features" },
     // { name: "Ekibimiz", href: "#team" },
     { name: "SSS", href: "#faq" },
-    { name: "İletişim", href: "#contact" },
+    { name: "Bize Ulaşın", href: "#contact" },
   ],
   social: [
     {

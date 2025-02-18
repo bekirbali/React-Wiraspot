@@ -179,7 +179,7 @@ const Contact = () => {
                 <div className="flex items-start space-x-4">
                   <PhoneIcon className="h-6 w-6 text-primary-500 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-700">+90 555 555 55 55</p>
+                    <p className="text-gray-700">+90 530 773 52 65</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

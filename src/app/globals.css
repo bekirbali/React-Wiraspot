@@ -320,3 +320,7 @@ html {
 .backdrop-blur {
   @apply backdrop-blur-md bg-white/80;
 }
+
+.spot {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

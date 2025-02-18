@@ -206,7 +206,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="mt-20 md:mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl !pl-0 !ml-0"
+            className="mt-20 md:mt-10 text-4xl text-center lg:text-left font-bold tracking-tight text-white sm:text-6xl !pl-0 !ml-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -214,7 +214,7 @@ export default function Hero() {
             KVKK UYUMLU YASAL 5651 LOGLAMA
           </motion.h1>
           <motion.p
-            className="mt-6 text-lg leading-8 text-gray-300"
+            className="mt-6 text-lg leading-8 text-gray-300 text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -224,7 +224,7 @@ export default function Hero() {
             işgücü yatırıma gerek duymadan çözümler sunmaktadır.
           </motion.p>
           <motion.div
-            className="mt-10 flex items-center gap-x-6"
+            className="mt-10 flex items-center gap-x-6 justify-center lg:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}

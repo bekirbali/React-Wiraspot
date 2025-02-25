@@ -1,5 +1,5 @@
 # Wiraspot - Hotspot Service Website
-## [Link text Here](https://wiraspot.com)
+## [wiraspot.com](https://wiraspot.com)
 
 ## Product Requirements Document (PRD)
 

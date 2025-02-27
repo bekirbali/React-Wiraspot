@@ -73,7 +73,7 @@ const Header = () => {
                 <span className="relative">
                   o
                   <WifiIcon
-                    className={`w-5 h-5 absolute top-0 -translate-y-[2px] left-1/2 -translate-x-1/2 ${
+                    className={`w-5 h-5 absolute top-0 -translate-y-[4px] left-1/2 -translate-x-1/2 ${
                       isScrolled ? "text-blue-500" : "text-blue-700"
                     }`}
                     style={{ zIndex: 1 }}

@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
-import HowToSetup from "./HowToSetup";
 
 const Purchase = () => {
   return (
@@ -10,19 +8,6 @@ const Purchase = () => {
       className="bg-gradient-to-b from-primary-100 to-primary-200 py-24 sm:py-32"
     >
       <div className="container mx-auto px-4">
-        {/* <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="text-4xl font-bold text-primary-900 mb-4">Satın Al</h2>
-          <p className="text-lg text-primary-600 max-w-2xl mx-auto">
-            İhtiyacınıza en uygun paketi seçin ve hemen kullanmaya başlayın
-          </p>
-        </motion.div> */}
-
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -34,9 +19,6 @@ const Purchase = () => {
             <h3 className="text-3xl font-bold text-primary-900 mb-2">
               Aylık Paket
             </h3>
-            {/* <div className="text-3xl font-bold text-primary-900 mb-8">
-              ₺599/ay
-            </div> */}
             <a href="#contact">
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -55,8 +37,6 @@ const Purchase = () => {
             <h3 className="text-3xl font-bold text-white mb-2">
               Başlangıç Paketi
             </h3>
-            {/* <p className="text-primary-100 mb-6">Küçük işletmeler için ideal</p> */}
-            {/* <div className="text-4xl font-bold text-white mb-8">₺2500/yıl</div> */}
             <a href="#contact">
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -72,9 +52,6 @@ const Purchase = () => {
             <h3 className="text-3xl font-bold text-primary-900 mb-2">
               Standart Paket
             </h3>
-            {/* <div className="text-3xl font-bold text-primary-900 mb-8">
-              ₺5000/yıl
-            </div> */}
             <a href="#contact">
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -90,9 +67,6 @@ const Purchase = () => {
             <h3 className="text-3xl font-bold text-primary-900 mb-2">
               Limitsiz Paket
             </h3>
-            {/* <div className="text-3xl font-bold text-primary-900 mb-8">
-              ₺7000/yıl
-            </div> */}
             <a href="#contact">
               <motion.button
                 whileHover={{ scale: 1.02 }}

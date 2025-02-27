@@ -8,24 +8,6 @@ import { loadSlim } from "tsparticles-slim";
 import Modal from "../ui/Modal";
 import DemoForm from "../ui/DemoForm";
 
-// const socialIcons = [
-//   { name: "wordpress", color: "#21759b" },
-//   { name: "youtube", color: "#FF0000" },
-//   { name: "dropbox", color: "#0061FF" },
-//   { name: "facebook", color: "#1877F2" },
-//   { name: "instagram", color: "#E4405F" },
-//   { name: "linkedin", color: "#0A66C2" },
-//   { name: "android", color: "#3DDC84" },
-//   { name: "behance", color: "#1769FF" },
-//   { name: "whatsapp", color: "#25D366" },
-//   { name: "apple", color: "#000000" },
-//   { name: "wifi", color: "#4285F4" },
-//   { name: "windows", color: "#00A4EF" },
-//   { name: "yahoo", color: "#6001D2" },
-//   { name: "skype", color: "#00AFF0" },
-//   { name: "pinterest", color: "#E60023" },
-// ];
-
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const particlesInit = useCallback(async (engine) => {
@@ -247,51 +229,6 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 1 }}
         >
           <div className="relative w-[600px] h-[600px]">
-            {/* {socialIcons.map((icon, index) => {
-              const angle =
-                (index * (360 / socialIcons.length) * Math.PI) / 180;
-              const radius = 250; // Adjust this value to change the circle size
-              const x = Math.cos(angle) * radius;
-              const y = Math.sin(angle) * radius;
-
-              return (
-                <motion.div
-                  key={icon.name}
-                  className="absolute"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    x: x + radius - 30, // Center adjustment
-                    y: y + radius - 30, // Center adjustment
-                  }}
-                  transition={{ delay: index * 0.1 + 0.5, duration: 0.5 }}
-                >
-                  <div
-                    className={`w-[60px] h-[60px] rounded-full bg-white shadow-lg flex items-center justify-center`}
-                  >
-                    <i
-                      className={`fab fa-${icon.name} text-2xl`}
-                      style={{ color: icon.color }}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })} */}
-            {/* <Image
-              src="/images/hotspot.jpg"
-              alt="Hero Image"
-              width={600}
-              height={600}
-              className="rounded-full"
-            /> */}
-            {/* <Image
-              src="/images/hotspot11.jpg"
-              alt="Hero Image"
-              width={600}
-              height={600}
-              className="rounded-full"
-            /> */}
             <Image
               src="/images/hotspot22.png"
               alt="Hero Image"

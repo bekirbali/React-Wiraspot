@@ -87,34 +87,6 @@ export default function Features() {
             ))}
           </dl>
         </motion.div>
-
-        {/* <motion.div
-          className="mt-16 sm:mt-24 flex justify-center"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative">
-            <div className="absolute -inset-x-4 -inset-y-4 z-0 bg-primary-200 rounded-2xl"></div>
-            <div className="relative z-10 bg-white rounded-xl shadow-lg p-8">
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">1Gbps</div>
-                  <div className="mt-2 text-sm text-primary-600">Max Speed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">99.9%</div>
-                  <div className="mt-2 text-sm text-primary-600">Uptime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">24/7</div>
-                  <div className="mt-2 text-sm text-primary-600">Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </div>
   );

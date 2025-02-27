@@ -11,7 +11,6 @@ const navigation = [
   { name: "SATIN AL", href: "#purchase" },
   { name: "NASIL BAĞLANIRIM", href: "#how-to-connect" },
   { name: "ÖZELLİKLER", href: "#features" },
-  // { name: "EKİBİMİZ", href: "#team" },
   { name: "SIK SORULAN SORULAR", href: "#faq" },
   { name: "BİZE ULAŞIN", href: "#contact" },
 ];
@@ -74,9 +73,10 @@ const Header = () => {
                 <span className="relative">
                   o
                   <WifiIcon
-                    className={`w-5 h-5 absolute top-0 -z-10  left-1/2 -translate-x-1/2 ${
+                    className={`w-5 h-5 absolute top-0 -translate-y-[2px] left-1/2 -translate-x-1/2 ${
                       isScrolled ? "text-blue-500" : "text-blue-700"
                     }`}
+                    style={{ zIndex: 1 }}
                   />
                 </span>
                 t

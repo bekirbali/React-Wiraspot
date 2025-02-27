@@ -7,7 +7,6 @@ const navigation = {
     { name: "Satın Al", href: "#purchase" },
     { name: "Nasıl Bağlanırım", href: "#how-to-connect" },
     { name: "Özellikler", href: "#features" },
-    // { name: "Ekibimiz", href: "#team" },
     { name: "SSS", href: "#faq" },
     { name: "Bize Ulaşın", href: "#contact" },
   ],
